@@ -1,0 +1,38 @@
+#%RAML 0.8
+title: OICElectricityConsumption
+version: xxxxxxxxxxxxxxx
+
+schemas:
+  - Consumption: !include oic.r.electricity.consumption.json
+
+traits:
+  - interface:
+      queryParameters:
+        if:
+          enum: ["oic.if.s","oic.if.baseline"]
+
+/ElectricityConsumptionResURI:
+  description: |
+    This resource describes the cumulative electrical energy measured by a measuring element of the device (the electricity value is in Watt Hours [Wh])
+    and the instantaneous power draw measured by a measuring element of the device (the power value is in Watts [W]) at the time the resource was queried.
+    The power value is in Watts [W].
+    The electrical energy value is in Watt Hours [Wh].
+
+  displayName: Electricity Consumption
+  is: [ interface ] # valid for all methods
+
+  get:
+    description: |
+      Provides the current power draw and cumulative electricity usage.
+    responses:
+      200:
+        body:
+          application/json:
+            schema: Consumption
+            example: |
+              {
+                "rt": 	["oic.r.electricity.consumption"],
+                "id": 	"unique_example_id",
+                "power":  2000.1,
+                "electricity": 3500.4
+              }
