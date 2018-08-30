@@ -1,0 +1,35 @@
+#%RAML 0.8
+title: OICElectricityPrice
+version: xxxxxxxxxxxxxxx
+
+schemas:
+  - Price: !include oic.r.electricity.price.json
+
+traits:
+  - interface:
+      queryParameters:
+        if:
+          enum: ["oic.if.s","oic.if.baseline"]
+
+/ElectricityPriceResURI:
+  description: |
+    This resource describes the current price of electrical energy measured by a measuring element of the device in currency units per kWh
+      
+  displayName: Electricity Price
+  is: [ interface ] # valid for all methods
+
+  get:
+    description: |
+      Provides the current electricity price.
+    responses:
+      200:
+        body:
+          application/json:
+            schema: Price
+            example: |
+              {
+                "rt": 	["oic.r.electricity.price"],
+                "id": 	"unique_example_id",
+                "price":  12.5,
+                “currency: “GBP”
+               }
