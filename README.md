@@ -65,7 +65,7 @@ Electricity Price ->   OICElectricityPrice.raml
 </pre>
 
  
- ###Electricity Tariff  -> OICElectricityTariff.raml
+ ### Electricity Tariff  -> OICElectricityTariff.raml
 <pre>
 Electricity Tariff  -> OICElectricityTariff.raml
 |
