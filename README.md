@@ -36,7 +36,7 @@ Electricity Consumption ->  OICElectricityConsumption.raml
 |
 |+Electrical Energy Consumption.json -> (oic.r.electricity.consumption.json)
 | |----Instantaneous power: Number in W
-| |----Electrical energy consumed: Number in Wh
+| |----Electrical energy consumed: Number in kWh
 |
 </pre>
  
@@ -47,7 +47,7 @@ Electricity Usage -> OICElectricityUsage.raml
 |
 |+Electrical Energy Consumption.json -> (oic.r.electricity.consumption.json)
 | |----Instantaneous power: Number in W
-| |----Electrical energy consumed: Number in Wh
+| |----Electrical energy consumed: Number in kWh
 |
 |+TimePeriod .json -> (oic.r.time.period.json)
 | |----stop time: String ISO8601
