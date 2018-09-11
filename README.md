@@ -61,7 +61,7 @@ Electricity Price ->   OICElectricityPrice.raml
 |
 |+Electricity Price.json -> oic.r.electricity.price.json
 | |----Price: Number in currency units per kWh
-| |----Currency: String
+| |----Currency: String ISO4217 
 </pre>
 
  
