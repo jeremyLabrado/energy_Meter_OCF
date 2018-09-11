@@ -14,14 +14,7 @@
         },
         "currency": {
           "type": "String",
-          "enum": [
-            "GBP",
-            "EUR",
-            "USD",
-            "YEN",
-            "CAD"
-          ],
-          "description": "The currency use for the property price",
+          "description": "The currency use for the property price using the ISO 4217 currency code",
           "readOnly": true
         }
       }
