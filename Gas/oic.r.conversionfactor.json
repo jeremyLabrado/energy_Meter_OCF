@@ -1,0 +1,30 @@
+{
+  "id": "http://openinterconnect.org/iotdatamodels/schemas/oic.r.conversion.factor.json#",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "description": "Copyright (c) 2018 Open Connectivity Foundation, Inc. All rights reserved.",
+  "title": "Conversion Factor",
+  "definitions": {
+    "oic.r.conversion.factor": {
+      "type": "object",
+      "properties": {
+        "conversion": {
+          "type": "number",
+          "readOnly": true,
+          "description": "conversion factor to convert a volume of a fuel to energy consumption"
+        }
+      }
+    }
+  },
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "oic.baseResource.json#/definitions/oic.r.baseresource"
+    },
+    {
+      "$ref": "#/definitions/oic.r.conversion.factor"
+    }
+  ],
+  "required": [
+    "conversion"
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "id": "http://openinterconnect.org/iotdatamodels/schemas/oic.r.gas.consumption.json#",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "description": "Copyright (c) 2018 Open Connectivity Foundation, Inc. All rights reserved.",
+  "title": "Gas Consumption",
+  "definitions": {
+    "oic.r.gas.consumption": {
+      "type": "object",
+      "properties": {
+        "gas": {
+          "type": "number",
+          "readOnly": true,
+          "description": "gas energy consumed in kWh"
+        },
+        "volume": {
+          "type": "number",
+          "readOnly": true,
+          "description": "gas volume consumed in m3 (metres cubed)"
+        }
+      }
+    }
+  },
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "oic.baseResource.json#/definitions/oic.r.baseresource"
+    },
+    {
+      "$ref": "#/definitions/oic.r.gas.consumption"
+    }
+  ],
+  "required": [
+    "gas"
+  ]
+}

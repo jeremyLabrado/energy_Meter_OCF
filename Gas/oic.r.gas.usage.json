@@ -1,0 +1,33 @@
+{
+  "id": "http://openinterconnect.org/iotdatamodels/schemas/oic.r.gas.usage.json#",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "description": "Copyright (c) 2018 Open Connectivity Foundation, Inc. All rights reserved.",
+  "title": "Gas Energy Usage",
+  "definitions": {
+    "oic.r.gas.usage": {
+      "type": "object",
+      "properties": {
+        "resources": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 2,
+          "items": {
+            "$ref": "oic.oic-link-schema.json#/definitions/oic.oic-link"
+          }
+        }
+      }
+    }
+  },
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "oic.baseResource.json#/definitions/oic.r.baseresource"
+    },
+    {
+      "$ref": "#/definitions/oic.r.gas.usage"
+    }
+  ],
+  "required": [
+    "resources"
+  ]
+}

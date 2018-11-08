@@ -1,0 +1,30 @@
+{
+  "id": "http://openinterconnect.org/iotdatamodels/schemas/oic.r.calorific.value.json#",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "description": "Copyright (c) 2018 Open Connectivity Foundation, Inc. All rights reserved.",
+  "title": "Calorific Value",
+  "definitions": {
+    "oic.r.calorific.value": {
+      "type": "object",
+      "properties": {
+        "calorific": {
+          "type": "number",
+          "readOnly": true,
+          "description": "calorific value of fuel"
+        }
+      }
+    }
+  },
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "oic.baseResource.json#/definitions/oic.r.baseresource"
+    },
+    {
+      "$ref": "#/definitions/oic.r.calorific.value"
+    }
+  ],
+  "required": [
+    "calorific"
+  ]
+}
